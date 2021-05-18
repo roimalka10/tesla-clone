@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import React from "react";
 import MenuIcon from "@material-ui/icons/Menu";
-import Fade from "react-reveal/Fade";
 
 const Header = () => {
   return (
