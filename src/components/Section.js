@@ -17,7 +17,7 @@ const Section = ({
       <Buttons>
         <ButtonGroup>
           <LeftButton>{leftBtnText}</LeftButton>
-          <RightButton>{rightBtnText}</RightButton>
+          {rightBtnText && <RightButton>{rightBtnText}</RightButton>}
         </ButtonGroup>
         <DownArrow src="/images/down-arrow.svg" />
       </Buttons>
@@ -63,7 +63,7 @@ const LeftButton = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 100px;
-  opacity: 0.85;
+  opacity: 0.95;
   text-transform: uppercase;
   font-size: 12px;
   cursor: pointer;
