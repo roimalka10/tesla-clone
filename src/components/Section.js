@@ -44,6 +44,9 @@ const Wrap = styled.div`
 `;
 
 const ItemText = styled.div`
+  h1 {
+    font-size: 45px;
+  }
   padding-top: 15vh;
   text-align: center;
 `;
@@ -52,7 +55,7 @@ const Buttons = styled.div``;
 
 const ButtonGroup = styled.div`
   display: flex;
-  margin-bottom: 60px;
+  margin-bottom: 0px;
   @media (max-width: 600px) {
     flex-direction: column;
   }
@@ -81,7 +84,8 @@ const RightButton = styled(LeftButton)`
 `;
 
 const DownArrow = styled.img`
-  height: 40px;
+  margin-bottom: 30px;
+  height: 45px;
   overflow-x: hidden;
   animation: animateDown infinite 1.5s;
 `;

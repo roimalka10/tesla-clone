@@ -83,6 +83,7 @@ const Header = () => {
 
 const Container = styled.div`
   min-height: 53px;
+  text-transform: uppercase;
   position: fixed;
   display: flex;
   align-items: center;
@@ -110,6 +111,7 @@ const Menu = styled.div`
   a {
     font-weight: 600;
     text-decoration: uppercase;
+    font-size: 14px;
     margin: 0 10px;
     flex-wrap: nowrap;
   }
@@ -124,6 +126,7 @@ const RightMenu = styled.div`
   a {
     font-weight: 600;
     text-decoration: uppercase;
+    font-size: 14px;
     margin-right: 10px;
   }
 `;
