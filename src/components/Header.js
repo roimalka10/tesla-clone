@@ -40,7 +40,7 @@ const Header = () => {
           <a href="">Existing Inventroy</a>
         </li>
         <li>
-          <a href="">Use Inventroy</a>
+          <a href="">Used Inventroy</a>
         </li>
         <li>
           <a href="">Trade-in</a>
@@ -157,7 +157,7 @@ const BurgerNav = styled.div`
   width: 295px;
   z-index: 20;
   list-style: none;
-  padding: 20px;
+  padding: 14px 6px 20px 28px;
   transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
   transition: transform 0.2s;
   li {
@@ -165,7 +165,8 @@ const BurgerNav = styled.div`
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
     a {
-      font-weight: 600;
+      font-weight: 400;
+      font-size: 14px;
     }
   }
 `;
@@ -173,6 +174,7 @@ const BurgerNav = styled.div`
 const CloseWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 10px;
 `;
 
 const CustomClose = styled(CloseIcon)`
