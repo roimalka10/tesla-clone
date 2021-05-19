@@ -45,17 +45,31 @@ const Wrap = styled.div`
 
 const ItemText = styled.div`
   h1 {
-    font-size: 45px;
+    font-size: 42px;
+    font-weight: 200;
+    margin-bottom: 5px;
   }
-  padding-top: 15vh;
+  p {
+    font-size: 14px;
+    font-weight: lighter;
+    color: #787d84;
+  }
+  padding-top: 16vh;
   text-align: center;
+  margin: 4px 15px 0 0;
 `;
 
-const Buttons = styled.div``;
+const Buttons = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15px;
+`;
 
 const ButtonGroup = styled.div`
   display: flex;
   margin-bottom: 0px;
+
   @media (max-width: 600px) {
     flex-direction: column;
   }
@@ -73,7 +87,7 @@ const LeftButton = styled.div`
   border-radius: 100px;
   opacity: 0.95;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 13px;
   cursor: pointer;
 `;
 

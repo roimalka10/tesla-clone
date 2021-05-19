@@ -110,11 +110,13 @@ const Menu = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
   flex: 1;
   a {
     font-weight: 400;
     text-decoration: uppercase;
     font-size: 15px;
+    color: #2a2b2d;
     margin: 0 10px;
     flex-wrap: nowrap;
   }
@@ -130,6 +132,7 @@ const RightMenu = styled.div`
     font-weight: 400;
     text-decoration: uppercase;
     font-size: 15px;
+    color: #2a2b2d;
     margin-right: 14px;
   }
   #shop {
