@@ -1,6 +1,11 @@
+@font-face {
+  font-family: "iCielMedium";
+  src: local("iCielMedium"), url("./font/iCiel-Medium.ttf") format("truetype");
+}
+
 * {
   box-sizing: border-box;
-  font-family: "Rubik", sans-serif;
+  font-family: "iCielMedium", sans-serif;
   color: #393c41;
   margin: 0;
   padding: 0;

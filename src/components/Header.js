@@ -26,7 +26,9 @@ const Header = () => {
         <a href="#">Solar Panels</a>
       </Menu>
       <RightMenu>
-        <a href="#">Shop</a>
+        <a id="shop" href="#">
+          Shop
+        </a>
         <a href="#">Tesla Account</a>
         <CustomMenu onClick={() => setBurgerStatus(true)} />
       </RightMenu>
@@ -88,7 +90,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 0 0 20px;
   top: 0;
   left: 0;
   right: 0;
@@ -104,14 +106,15 @@ const Container = styled.div`
 `;
 
 const Menu = styled.div`
+  padding-left: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1;
   a {
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: uppercase;
-    font-size: 14px;
+    font-size: 15px;
     margin: 0 10px;
     flex-wrap: nowrap;
   }
@@ -124,15 +127,19 @@ const RightMenu = styled.div`
   display: flex;
   align-items: center;
   a {
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: uppercase;
-    font-size: 14px;
-    margin-right: 10px;
+    font-size: 15px;
+    margin-right: 14px;
+  }
+  #shop {
+    margin-right: 18px;
   }
 `;
 
 const CustomMenu = styled(MenuIcon)`
   cursor: pointer;
+  margin-right: 6px;
 `;
 
 const BurgerNav = styled.div`
