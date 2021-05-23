@@ -22,14 +22,23 @@ const Header = () => {
               {car}
             </a>
           ))}
-        <a href="#">Solar Roof</a>
-        <a href="#">Solar Panels</a>
+        <a href="https://www.tesla.com/solarroof" target="_blank">
+          Solar Roof
+        </a>
+        <a href="https://www.tesla.com/solarpanels" target="_blank">
+          Solar Panels
+        </a>
       </Menu>
       <RightMenu>
-        <a id="shop" href="#">
+        <a id="shop" href="https://shop.tesla.com/?tesref=true" target="_blank">
           Shop
         </a>
-        <a href="#">Tesla Account</a>
+        <a
+          href="https://auth.tesla.com/oauth2/v1/authorize?client_id=teslaweb&response_type=code&scope=openid%20email%20profile&redirect_uri=https%3A//www.tesla.com/openid-connect/generic&state=Wq3u5Q2t7JIwG8wSMkKVcgf4X6FbcvFhwlU2fiB8gzY&locale=en-US"
+          target="_blank"
+        >
+          Tesla Account
+        </a>
         <CustomMenu onClick={() => setBurgerStatus(true)} />
       </RightMenu>
       <BurgerNav show={BurgerStatus}>
@@ -37,46 +46,75 @@ const Header = () => {
           <CustomClose onClick={() => setBurgerStatus(false)} />
         </CloseWrapper>
         <li>
-          <a href="">Existing Inventroy</a>
+          <a href="https://www.tesla.com/inventory/new/m3" target="_blank">
+            Existing Inventroy
+          </a>
         </li>
         <li>
-          <a href="">Used Inventroy</a>
+          <a href="https://www.tesla.com/inventory/used/m3" target="_blank">
+            Used Inventroy
+          </a>
         </li>
         <li>
-          <a href="">Trade-in</a>
+          <a href="https://www.tesla.com/tradein" target="_blank">
+            Trade-in
+          </a>
         </li>
         <li>
-          <a href="">Cybertruck</a>
+          <a href="https://www.tesla.com/cybertruck" target="_blank">
+            Cybertruck
+          </a>
         </li>
         <li>
-          <a href="">Roadster</a>
+          <a href="https://www.tesla.com/roadster" target="_blank">
+            Roadster
+          </a>
         </li>
         <li>
-          <a href="">Semi</a>
+          <a href="https://www.tesla.com/semi" target="_blank">
+            Semi
+          </a>
         </li>
         <li>
-          <a href="">Charging</a>
+          <a href="https://www.tesla.com/charging" target="_blank">
+            Charging
+          </a>
         </li>
         <li>
-          <a href="">Powerwall</a>
+          <a href="https://www.tesla.com/powerwall" target="_blank">
+            Powerwall
+          </a>
         </li>
         <li>
-          <a href="">Commercial Energy</a>
+          <a href="https://www.tesla.com/commercial" target="_blank">
+            Commercial Energy
+          </a>
         </li>
         <li>
-          <a href="">Utiities</a>
+          <a href="https://www.tesla.com/utilities" target="_blank">
+            Utiities
+          </a>
         </li>
         <li>
-          <a href="">Test Drive</a>
+          <a href="https://www.tesla.com/drive" target="_blank">
+            Test Drive
+          </a>
         </li>
         <li>
-          <a href="">Find Us</a>
+          <a
+            href="https://www.tesla.com/findus?v=2&bounds=64.20540327078639%2C-46.224610562500004%2C2.9846921277096476%2C-152.3085949375&zoom=4&filters=store%2Cservice%2Csupercharger%2Cdestination%20charger%2Cbodyshop"
+            target="_blank"
+          >
+            Find Us
+          </a>
         </li>
         <li>
-          <a href="">Support</a>
+          <a href="https://www.tesla.com/support" target="_blank">
+            Support
+          </a>
         </li>
         <li>
-          <a href="">United States</a>
+          <a href="#">United States</a>
         </li>
       </BurgerNav>
     </Container>
@@ -173,6 +211,12 @@ const BurgerNav = styled.div`
     a {
       font-weight: 400;
       font-size: 14px;
+    }
+  }
+  @media (max-width: 1200px) {
+    li a {
+      font-weight: 200;
+      font-size: 12px;
     }
   }
 `;

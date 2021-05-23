@@ -34,9 +34,9 @@ const Wrap = styled.div`
   width: 100vw;
   height: 100vh;
   background-image: ${(props) => `url("/images/${props.bgImage}")`};
-  background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -89,6 +89,10 @@ const LeftButton = styled.div`
   text-transform: uppercase;
   font-size: 13px;
   cursor: pointer;
+  @media (max-width: 600px) {
+    width: 90vw;
+    margin-left: 15px;
+  }
 `;
 
 const RightButton = styled(LeftButton)`
