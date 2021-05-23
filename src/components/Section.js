@@ -20,8 +20,21 @@ const Section = ({
       <Buttons>
         <Fade bottom>
           <ButtonGroup>
-            <LeftButton>{leftBtnText}</LeftButton>
-            {rightBtnText && <RightButton>{rightBtnText}</RightButton>}
+            <LeftButton>
+              <a href="https://www.tesla.com/inventory/new/m3" target="_blank">
+                {leftBtnText}
+              </a>
+            </LeftButton>
+            {rightBtnText && (
+              <RightButton>
+                <a
+                  href="https://www.tesla.com/inventory/new/m3"
+                  target="_blank"
+                >
+                  {rightBtnText}{" "}
+                </a>
+              </RightButton>
+            )}
           </ButtonGroup>
           <DownArrow src="/images/down-arrow.svg" />
         </Fade>
@@ -80,7 +93,9 @@ const LeftButton = styled.div`
   background-color: rgba(23, 26, 32, 0.8);
   height: 40px;
   width: 256px;
-  color: white;
+  a {
+    color: white;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,7 +113,9 @@ const LeftButton = styled.div`
 const RightButton = styled(LeftButton)`
   background: white;
   opacity: 0.65;
-  color: black;
+  a {
+    color: black;
+  }
 `;
 
 const DownArrow = styled.img`
