@@ -138,6 +138,12 @@ const RightMenu = styled.div`
   #shop {
     margin-right: 18px;
   }
+  a,
+  #shop {
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
 `;
 
 const CustomMenu = styled(MenuIcon)`
