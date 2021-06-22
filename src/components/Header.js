@@ -1,27 +1,33 @@
 import styled from "styled-components";
 import React from "react";
 import { useState } from "react";
-import MenuIcon from "@material-ui/icons/Menu";
-import CloseIcon from "@material-ui/icons/Close";
-import { selectCars } from "../features/car/carSlice";
-import { useSelector } from "react-redux";
+import { FaTimes } from "react-icons/fa";
 
 const Header = () => {
-  const [BurgerStatus, setBurgerStatus] = useState(false);
-  const cars = useSelector(selectCars);
+  const [showMenu, setShowMenu] = useState(false);
 
+  const handleClick = () => {
+    setShowMenu(!showMenu);
+  };
+  
   return (
     <Container>
       <a>
         <img src="/images/logo.svg" alt="" />
       </a>
       <Menu>
-        {cars &&
-          cars.map((car, index) => (
-            <a key={index} href="#">
-              {car}
-            </a>
-          ))}
+      <a href="https://www.tesla.com/solarroof" target="_blank">
+          Model S
+        </a>
+        <a href="https://www.tesla.com/solarroof" target="_blank">
+          Model 3
+        </a>
+        <a href="https://www.tesla.com/solarroof" target="_blank">
+          Model X
+        </a>
+        <a href="https://www.tesla.com/solarroof" target="_blank">
+          Model Y
+        </a>
         <a href="https://www.tesla.com/solarroof" target="_blank">
           Solar Roof
         </a>
@@ -37,14 +43,17 @@ const Header = () => {
           href="https://auth.tesla.com/oauth2/v1/authorize?client_id=teslaweb&response_type=code&scope=openid%20email%20profile&redirect_uri=https%3A//www.tesla.com/openid-connect/generic&state=Wq3u5Q2t7JIwG8wSMkKVcgf4X6FbcvFhwlU2fiB8gzY&locale=en-US"
           target="_blank"
         >
-          Tesla Account
+         Account
         </a>
-        <CustomMenu onClick={() => setBurgerStatus(true)} />
+        <BurgerIcon  onClick={handleClick}>
+          <CustomMenu>Menu</CustomMenu>
+       </BurgerIcon>
       </RightMenu>
-      <BurgerNav show={BurgerStatus}>
-        <CloseWrapper>
-          <CustomClose onClick={() => setBurgerStatus(false)} />
-        </CloseWrapper>
+      
+      <div className={showMenu ? "navbar-items active" : "navbar-items"}>
+        <div>
+      <ExitIcon size={20}  onClick={handleClick}/>
+      </div>
         <li>
           <a href="https://www.tesla.com/inventory/new/m3" target="_blank">
             Existing Inventroy
@@ -116,44 +125,46 @@ const Header = () => {
         <li>
           <a href="#">United States</a>
         </li>
-      </BurgerNav>
+      </div>
+     
     </Container>
   );
 };
 
 const Container = styled.div`
   min-height: 53px;
-  text-transform: uppercase;
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 0 0 20px;
+  padding: 5px 20px 0 47px;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1;
   a {
-    font-size: 16px;
+    font-size: 14px;
 
     img {
-      height: 13px;
-      width: 100px;
+      height: 16px;
+      width: 120px;
     }
   }
 `;
 
 const Menu = styled.div`
-  padding-left: 140px;
+  padding-left: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
 
   flex: 1;
   a {
+    padding-left: 11px;
     font-weight: 400;
     text-decoration: uppercase;
-    font-size: 15px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
     color: #2a2b2d;
     margin: 0 10px;
     flex-wrap: nowrap;
@@ -167,9 +178,11 @@ const RightMenu = styled.div`
   display: flex;
   align-items: center;
   a {
+    margin-left: 15px;
     font-weight: 400;
     text-decoration: uppercase;
-    font-size: 15px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
     color: #2a2b2d;
     margin-right: 14px;
   }
@@ -184,51 +197,29 @@ const RightMenu = styled.div`
   }
 `;
 
-const CustomMenu = styled(MenuIcon)`
+const CustomMenu = styled.span`
   cursor: pointer;
-  margin-right: 6px;
-`;
-
-const BurgerNav = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: start;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background-color: white;
-  width: 295px;
-  z-index: 20;
-  list-style: none;
-  padding: 14px 6px 20px 28px;
-  transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
-  transition: transform 0.2s;
-  li {
-    padding: 20px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-
-    a {
-      font-weight: 400;
-      font-size: 14px;
-    }
-  }
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 14px;
   @media (max-width: 1200px) {
-    li a {
-      font-weight: 200;
-      font-size: 12px;
+    background-color: #cbd2db;
+      padding: 7px 12px;
+      border-radius:11px;
     }
-  }
 `;
-
-const CloseWrapper = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 10px;
-`;
-
-const CustomClose = styled(CloseIcon)`
+const BurgerIcon = styled.div`
+  display: block;
+  margin-bottom: 1px;
   cursor: pointer;
 `;
+
+const ExitIcon = styled(FaTimes)`
+  z-index:900; 
+  position: absolute;
+  right:12px;
+  top:30px;
+  cursor: pointer;
+`
 
 export default Header;

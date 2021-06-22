@@ -21,6 +21,47 @@ a {
   text-decoration: none;
 }
 
+.navbar-items {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -110%;
+  background-color: white;
+  width: 295px;
+  height: 100vh;
+  z-index: 2;
+  list-style: none;
+  padding: 70px 6px 20px 40px;
+  transition: all 0.8s ease;
+}
+
+.navbar-items.active {
+  right: 0px;
+  transition: all 0.8s ease;
+  z-index: 600;
+}
+
+@media (max-width: 1200px) {
+  .navbar-items li a {
+      font-weight: 200;
+      font-size: 12px;
+    }
+  }
+
+.navbar-items li {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.navbar-items li a{
+    font-weight: 400;
+    font-size: 14px;  
+}
+
+
 @keyframes animateDown {
   0%,
   20%,
