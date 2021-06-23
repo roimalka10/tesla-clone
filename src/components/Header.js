@@ -16,16 +16,16 @@ const Header = () => {
         <img src="/images/logo.svg" alt="" />
       </a>
       <Menu>
-        <a href="https://www.tesla.com/solarroof" target="_blank">
+        <a href="https://www.tesla.com/models" target="_blank">
           Model S
         </a>
-        <a href="https://www.tesla.com/solarroof" target="_blank">
+        <a href="https://www.tesla.com/model3" target="_blank">
           Model 3
         </a>
-        <a href="https://www.tesla.com/solarroof" target="_blank">
+        <a href="https://www.tesla.com/modelx" target="_blank">
           Model X
         </a>
-        <a href="https://www.tesla.com/solarroof" target="_blank">
+        <a href="https://www.tesla.com/modely" target="_blank">
           Model Y
         </a>
         <a href="https://www.tesla.com/solarroof" target="_blank">
