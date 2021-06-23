@@ -9,14 +9,14 @@ const Header = () => {
   const handleClick = () => {
     setShowMenu(!showMenu);
   };
-  
+
   return (
     <Container>
       <a>
-        <img src="/images/logo.svg" alt="" />
+        <img src="./images/logo.svg" alt="" />
       </a>
       <Menu>
-      <a href="https://www.tesla.com/solarroof" target="_blank">
+        <a href="https://www.tesla.com/solarroof" target="_blank">
           Model S
         </a>
         <a href="https://www.tesla.com/solarroof" target="_blank">
@@ -43,17 +43,17 @@ const Header = () => {
           href="https://auth.tesla.com/oauth2/v1/authorize?client_id=teslaweb&response_type=code&scope=openid%20email%20profile&redirect_uri=https%3A//www.tesla.com/openid-connect/generic&state=Wq3u5Q2t7JIwG8wSMkKVcgf4X6FbcvFhwlU2fiB8gzY&locale=en-US"
           target="_blank"
         >
-         Account
+          Account
         </a>
-        <BurgerIcon  onClick={handleClick}>
+        <BurgerIcon onClick={handleClick}>
           <CustomMenu>Menu</CustomMenu>
-       </BurgerIcon>
+        </BurgerIcon>
       </RightMenu>
-      
+
       <div className={showMenu ? "navbar-items active" : "navbar-items"}>
         <div>
-      <ExitIcon size={20}  onClick={handleClick}/>
-      </div>
+          <ExitIcon size={20} onClick={handleClick} />
+        </div>
         <li>
           <a href="https://www.tesla.com/inventory/new/m3" target="_blank">
             Existing Inventroy
@@ -126,7 +126,6 @@ const Header = () => {
           <a href="#">United States</a>
         </li>
       </div>
-     
     </Container>
   );
 };
@@ -204,9 +203,9 @@ const CustomMenu = styled.span`
   font-size: 14px;
   @media (max-width: 1200px) {
     background-color: #cbd2db;
-      padding: 7px 12px;
-      border-radius:11px;
-    }
+    padding: 7px 12px;
+    border-radius: 11px;
+  }
 `;
 const BurgerIcon = styled.div`
   display: block;
@@ -215,11 +214,11 @@ const BurgerIcon = styled.div`
 `;
 
 const ExitIcon = styled(FaTimes)`
-  z-index:900; 
+  z-index: 900;
   position: absolute;
-  right:12px;
-  top:30px;
+  right: 12px;
+  top: 30px;
   cursor: pointer;
-`
+`;
 
 export default Header;
